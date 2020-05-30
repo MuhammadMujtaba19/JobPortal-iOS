@@ -24,7 +24,7 @@ class JobViewController: UIViewController {
                         response.data!) //Decode JSON Response Data
                             for model in models{
                                 self.jobs.append(model)
-                                print(model.Title)
+                                
                             }
                     self.JobTableView.reloadData()
                 }catch{
