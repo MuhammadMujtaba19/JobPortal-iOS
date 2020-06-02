@@ -53,13 +53,13 @@ class AddExperienceViewController: UIViewController {
             "StudentID": 3870,
             "Designation" : designationTextField.text!,
             "JDescription" : descriptionTextFIeld.text!,
-            "StartDate" : startDateTextField.text,
-            "EndDate": endDateTextField.text,
+            "StartDate" : startDateTextField.text!,
+            "EndDate": endDateTextField.text!,
             "OrganizationID":organizationID!
             ] as [String : Any]
         
         AF.request("http://127.0.0.1:8080/api/studentProfile/AddExperience", method: HTTPMethod.post, parameters: parameters).response { (response) in
-            
+            self.dismiss(animated: true, completion: nil)
         }
 
     }

@@ -11,6 +11,8 @@ import Alamofire
 class JobViewController: UIViewController {
     
     @IBOutlet weak var JobTableView: UITableView!
+    var id :Int?
+    @IBOutlet weak var tabBar: UITabBar!
     var jobs = [Job]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +59,16 @@ extension JobViewController:UITableViewDataSource{
         return cell
         
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        id = indexPath.row
+        self.performSegue(withIdentifier: "jobDetail", sender: self)
     
-    
+}
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier=="jobDetail"){
+            // Create a variable that you want to send
+             let destinationVC = segue.destination as! JobDetailViewController
+            
+    }
+    }
 }
