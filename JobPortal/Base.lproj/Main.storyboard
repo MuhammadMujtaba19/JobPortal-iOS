@@ -252,6 +252,7 @@
                     <tabBarItem key="tabBarItem" title="Job" image="j.square.fill" catalog="system" id="wjv-P5-L0a"/>
                     <connections>
                         <outlet property="JobTableView" destination="yic-P5-7vS" id="tTO-P4-Awb"/>
+                        <outlet property="searchBar" destination="y2V-80-Kzq" id="InD-YC-f1k"/>
                         <segue destination="VXC-QK-XiX" kind="show" identifier="jobDetail" id="9wv-4t-TZP"/>
                     </connections>
                 </viewController>
