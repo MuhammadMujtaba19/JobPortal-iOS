@@ -50,7 +50,7 @@ class AddExperienceViewController: UIViewController {
     @IBAction func submitExpButton(_ sender: UIButton) {
 
         let parameters = [
-            "StudentID": 3870,
+            "StudentID": UserDefaults.standard.integer(forKey: "StudentID"),
             "Designation" : designationTextField.text!,
             "JDescription" : descriptionTextFIeld.text!,
             "StartDate" : startDateTextField.text!,

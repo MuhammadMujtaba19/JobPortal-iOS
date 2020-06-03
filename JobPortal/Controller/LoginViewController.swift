@@ -73,7 +73,7 @@ class LoginViewController: UIViewController {
                         if let session_data = try? JSONEncoder().encode(currentStudent) {
                             UserDefaults.standard.set(session_data, forKey: "current")
                             UserDefaults.standard.set(true, forKey: "userLoggedIn")
-                            
+                            UserDefaults.standard.set(currentStudent.StudentID, forKey: "StudentID")
                         }
                         DispatchQueue.main.async {
                                     self.LoginDone()
@@ -96,7 +96,11 @@ class LoginViewController: UIViewController {
 
 
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "homeScreen") as! ViewController
+        
+        guard let nextViewController = storyBoard.instantiateViewController(identifier: "homeScreen") as? UITabBarController else {
+            print("ViewController not found")
+            return
+        }
         nextViewController.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
         self.present(nextViewController, animated: true, completion: nil)
 //        self.view.window

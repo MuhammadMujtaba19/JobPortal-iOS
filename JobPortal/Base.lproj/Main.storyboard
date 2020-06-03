@@ -75,19 +75,18 @@
                         <outlet property="EmailText" destination="3Ma-jx-3OE" id="ak6-zr-djn"/>
                         <outlet property="LoginButton" destination="P5b-V4-v2Y" id="rG5-4P-8cL"/>
                         <outlet property="PasswordText" destination="68R-cv-Rub" id="lF7-IZ-mAV"/>
-                        <segue destination="txl-oa-DWr" kind="show" identifier="goToHome" id="CPs-yE-3Di"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="frR-F6-xrE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2138" y="519"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JobPortal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ProfileViewController" customModule="JobPortal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zdC-17-WfX">
@@ -135,7 +134,7 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work Experience" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8NB-OK-tUT">
-                                                    <rect key="frame" x="10" y="22.5" width="153.5" height="25.5"/>
+                                                    <rect key="frame" x="10" y="22.5" width="153.5" height="25"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -169,45 +168,44 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="pVx-8N-o14"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="pVx-8N-o14"/>
                     <navigationItem key="navigationItem" id="ORi-ry-YZC"/>
                     <connections>
-                        <outlet property="StudentNameText" destination="CFY-72-B0W" id="Vxx-MT-Fr8"/>
-                        <outlet property="StudentRollNumberText" destination="FN0-fc-Vay" id="ZLU-lN-LHj"/>
-                        <outlet property="expirenceTableView" destination="bR5-VX-ZFJ" id="p3W-Rj-tXw"/>
+                        <outlet property="StudentNameText" destination="CFY-72-B0W" id="Toc-36-vjP"/>
+                        <outlet property="StudentRollNumberText" destination="FN0-fc-Vay" id="eSU-1S-yfa"/>
+                        <outlet property="expirenceTableView" destination="bR5-VX-ZFJ" id="GF1-Uc-hql"/>
                         <segue destination="3G4-IP-Sgx" kind="presentation" identifier="projectSegue" id="Kmy-J8-kVo"/>
                         <segue destination="ler-a9-LLQ" kind="presentation" identifier="experienceSegue" id="TXf-J3-lqc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="649" y="52"/>
+            <point key="canvasLocation" x="647.82608695652175" y="51.5625"/>
         </scene>
         <!--Tab Bar Controller-->
-        <scene sceneID="ceP-DN-UcY">
+        <scene sceneID="uyt-Lf-rL7">
             <objects>
-                <tabBarController storyboardIdentifier="homeScreen" id="txl-oa-DWr" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="3CM-Og-x12"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="roC-HV-ihS">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DLM-Yo-V7e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tabBarController storyboardIdentifier="homeScreen" id="sZX-my-D3f" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MPY-Ck-Pd9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="lQY-St-Voq"/>
-                        <segue destination="R9O-cz-Mu6" kind="relationship" relationship="viewControllers" id="VhE-ex-5B3"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="KEc-9r-wA2"/>
+                        <segue destination="R9O-cz-Mu6" kind="relationship" relationship="viewControllers" id="wQJ-Lz-3eo"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AfZ-iv-WQX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-446" y="519"/>
+            <point key="canvasLocation" x="-817" y="519"/>
         </scene>
-        <!--Item-->
+        <!--Job-->
         <scene sceneID="kaB-I2-MvK">
             <objects>
                 <viewController id="R9O-cz-Mu6" customClass="JobViewController" customModule="JobPortal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hgd-KQ-b7u">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Uo-uZ-XRk">
@@ -251,7 +249,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="LYn-U5-aB5"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="wjv-P5-L0a"/>
+                    <tabBarItem key="tabBarItem" title="Job" image="j.square.fill" catalog="system" id="wjv-P5-L0a"/>
                     <connections>
                         <outlet property="JobTableView" destination="yic-P5-7vS" id="tTO-P4-Awb"/>
                         <segue destination="VXC-QK-XiX" kind="show" identifier="jobDetail" id="9wv-4t-TZP"/>
@@ -283,8 +281,8 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.062745098040000002" green="0.098039215690000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HF5-kW-Dgg">
-                                <rect key="frame" x="20" y="250" width="205" height="58"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HF5-kW-Dgg">
+                                <rect key="frame" x="20" y="250" width="374" height="492"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
@@ -303,6 +301,10 @@
                         <viewLayoutGuide key="safeArea" id="sQi-lu-XDH"/>
                     </view>
                     <navigationItem key="navigationItem" id="fMX-Zq-mnz"/>
+                    <connections>
+                        <outlet property="JobDescription" destination="HF5-kW-Dgg" id="6NU-8H-rpK"/>
+                        <outlet property="JobTitle" destination="UvD-K5-gA6" id="mWN-w3-AqU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ldp-Op-0cw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -623,5 +625,7 @@
     </scenes>
     <resources>
         <image name="fast.png" width="970" height="339"/>
+        <image name="j.square.fill" catalog="system" width="128" height="114"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
     </resources>
 </document>

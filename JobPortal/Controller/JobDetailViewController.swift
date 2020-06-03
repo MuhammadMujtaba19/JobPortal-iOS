@@ -15,20 +15,23 @@ class JobDetailViewController: UIViewController {
     var jobdetail :JobDetails?
     override func viewDidLoad() {
         super.viewDidLoad()
-        AF.request("http://127.0.0.1:8080/api/Job/GetDetail/1111").responseJSON { (response) in
-                           do{
-                               print(response)
-                               let decoder = JSONDecoder()
-                               let models = try decoder.decode(JobDetails.self, from:
-                                   response.data!) //Decode JSON Response Data
-                            self.jobdetail = models
-                            self.JobTitle.text = self.jobdetail?.Designation
-                            self.JobDescription.text = self.jobdetail?.Description
-
-                           }catch{
-
+        AF.request("http://127.0.0.1:8080/api/Job/Detail/1111").responseJSON { (response) in
+                           do
+                            {
+                             let decoder = JSONDecoder()
+                               let models = try decoder.decode([JobDetails].self, from:response.data!)
+                                self.jobdetail = models[0]
+                                DispatchQueue.main.async {
+                                    guard (self.jobdetail?.Designation) != nil else {
+                                      print("Error!")
+                                      return
+                                    }
+                                self.JobTitle.text = self.jobdetail?.Title
+                                }
                            }
-                   
+                           catch{
+
+                            }
             }
     
         // Do any additional setup after loading the view.

@@ -10,7 +10,7 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
-    var window: UIWindow?
+ var window: UIWindow?
     var x = UserDefaults.standard.bool(forKey: "userLoggedIn")
           
 
@@ -22,7 +22,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             guard let windowScene = (scene as? UIWindowScene) else { return }
             self.window = UIWindow(windowScene: windowScene)
             //self.window =  UIWindow(frame: UIScreen.main.bounds)
-
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             guard let rootVC = storyboard.instantiateViewController(identifier: "homeScreen") as? UITabBarController else {
                 print("ViewController not found")
@@ -32,6 +31,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window?.makeKeyAndVisible()
         }
         guard let _ = (scene as? UIWindowScene) else { return }
+    
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -11,6 +11,7 @@
 		92538D6B247FDA590091C6A5 /* JobViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92538D69247FDA590091C6A5 /* JobViewCell.swift */; };
 		92538D6C247FDA590091C6A5 /* JobViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92538D6A247FDA590091C6A5 /* JobViewCell.xib */; };
 		92538D6E247FDB390091C6A5 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92538D6D247FDB390091C6A5 /* Job.swift */; };
+		9259BD742487D9CF001D671E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9259BD732487D9CF001D671E /* ViewController.swift */; };
 		925D6048247DB0B70078A547 /* fast.png in Resources */ = {isa = PBXBuildFile; fileRef = 925D6047247DB0B70078A547 /* fast.png */; };
 		925DDDC9247D6680004B03E5 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925DDDC8247D6680004B03E5 /* Student.swift */; };
 		926EC8E3247D1673004AC431 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926EC8E2247D1673004AC431 /* LoginViewController.swift */; };
@@ -32,7 +33,7 @@
 		92D6B74924772339008CDB69 /* AddExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D6B74824772339008CDB69 /* AddExperienceViewController.swift */; };
 		92E9D923247469FC00017962 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E9D922247469FC00017962 /* AppDelegate.swift */; };
 		92E9D925247469FC00017962 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E9D924247469FC00017962 /* SceneDelegate.swift */; };
-		92E9D927247469FC00017962 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E9D926247469FC00017962 /* ViewController.swift */; };
+		92E9D927247469FC00017962 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E9D926247469FC00017962 /* ProfileViewController.swift */; };
 		92E9D92A247469FC00017962 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E9D928247469FC00017962 /* Main.storyboard */; };
 		92E9D92C24746A0100017962 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92E9D92B24746A0100017962 /* Assets.xcassets */; };
 		92E9D92F24746A0100017962 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E9D92D24746A0100017962 /* LaunchScreen.storyboard */; };
@@ -47,6 +48,7 @@
 		92538D69247FDA590091C6A5 /* JobViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewCell.swift; sourceTree = "<group>"; };
 		92538D6A247FDA590091C6A5 /* JobViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobViewCell.xib; sourceTree = "<group>"; };
 		92538D6D247FDB390091C6A5 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		9259BD732487D9CF001D671E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		925D6047247DB0B70078A547 /* fast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fast.png; sourceTree = "<group>"; };
 		925DDDC8247D6680004B03E5 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		926EC8E2247D1673004AC431 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -69,7 +71,7 @@
 		92E9D91F247469FC00017962 /* JobPortal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobPortal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E9D922247469FC00017962 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92E9D924247469FC00017962 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		92E9D926247469FC00017962 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		92E9D926247469FC00017962 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		92E9D929247469FC00017962 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92E9D92B24746A0100017962 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92E9D92E24746A0100017962 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -109,11 +111,12 @@
 			isa = PBXGroup;
 			children = (
 				92D6B74624770FD9008CDB69 /* AddProjectViewController.swift */,
-				92E9D926247469FC00017962 /* ViewController.swift */,
+				92E9D926247469FC00017962 /* ProfileViewController.swift */,
 				92D6B74824772339008CDB69 /* AddExperienceViewController.swift */,
 				926EC8E2247D1673004AC431 /* LoginViewController.swift */,
 				9290F844247FDD4100D25200 /* JobViewController.swift */,
 				9290F8462482919900D25200 /* JobDetailViewController.swift */,
+				9259BD732487D9CF001D671E /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -313,10 +316,11 @@
 			files = (
 				92BD3AE02476987B001CB6B2 /* Domain.swift in Sources */,
 				92BD3AD6247687D2001CB6B2 /* headerCell.swift in Sources */,
-				92E9D927247469FC00017962 /* ViewController.swift in Sources */,
+				92E9D927247469FC00017962 /* ProfileViewController.swift in Sources */,
 				92BD3ADA24769370001CB6B2 /* Experience.swift in Sources */,
 				92D6B74924772339008CDB69 /* AddExperienceViewController.swift in Sources */,
 				92BD3AE2247699CC001CB6B2 /* StudentProfile.swift in Sources */,
+				9259BD742487D9CF001D671E /* ViewController.swift in Sources */,
 				925DDDC9247D6680004B03E5 /* Student.swift in Sources */,
 				92D6B7402476D5A9008CDB69 /* ExperienceViewCell.swift in Sources */,
 				9290F8492482932E00D25200 /* JobDetails.swift in Sources */,
@@ -487,7 +491,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mujtaba.JobPortal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -506,7 +510,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mujtaba.JobPortal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

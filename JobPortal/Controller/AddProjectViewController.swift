@@ -49,7 +49,7 @@ class AddProjectViewController: UIViewController {
     }
     @IBAction func SubmitButton(_ sender: UIButton) {
         let parameters = [
-                   "StudentID": 3870,
+            "StudentID": UserDefaults.standard.integer(forKey: "StudentID"),
                    "ProjectName" : projectNameTextField.text!,
                    "GitHubLink" : githubTextField.text!,
                    "courseOfferedID" : Int(courseIDTextField.text!),

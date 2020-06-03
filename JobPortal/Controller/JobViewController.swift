@@ -20,7 +20,7 @@ class JobViewController: UIViewController {
         JobTableView.dataSource = self
             AF.request("http://127.0.0.1:8080/api/Job/GetAllJobs").responseJSON { (response) in
                 do{
-                    print(response)
+//                    print(response)
                     let decoder = JSONDecoder()
                     let models = try decoder.decode([Job].self, from:
                         response.data!) //Decode JSON Response Data
