@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import ProgressHUD
 class AddProjectViewController: UIViewController {
     var frameworkName = [Framework]()
     var domainName = [Domain]()
@@ -19,17 +20,29 @@ class AddProjectViewController: UIViewController {
     @IBOutlet weak var frameworkNameTextField: UITextField!
     @IBOutlet weak var domainNameTextField: UITextField!
     
+    
+    @IBOutlet weak var NewFrameworkTextField: UITextField!
+    @IBOutlet weak var NewDomainTextField: UITextField!
+    
+    @IBOutlet weak var NewFrameworkView: UIView!
+    @IBOutlet weak var NewDomainView: UIView!
+    
     private var FrameworkPickerView: UIPickerView = UIPickerView()
     private var DomainPickerView: UIPickerView = UIPickerView()
     
     private var frameID:Int?
     private var DomainID:Int?
+    private var DomainName:String?
+    private var Fname:String?
+    
     var studentData:Student?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if let currentStudent = UserDefaults.standard.data(forKey: "current"){
             studentData = try? JSONDecoder().decode(Student.self, from: currentStudent)
+            NewFrameworkView.isHidden = true
+            NewDomainView.isHidden = true
         }
       
         FrameworkPickerView.delegate = self
@@ -48,21 +61,25 @@ class AddProjectViewController: UIViewController {
         
     }
     @IBAction func SubmitButton(_ sender: UIButton) {
+        
         let parameters = [
-            "StudentID": UserDefaults.standard.integer(forKey: "StudentID"),
-                   "ProjectName" : projectNameTextField.text!,
-                   "GitHubLink" : githubTextField.text!,
-                   "courseOfferedID" : Int(courseIDTextField.text!),
-                   "Skillvalue":skillsGainedTextField.text!,
-                   "ApproveStatus": "Complete",
-                   "FrameworkID":frameID!,
-                   "DomainID":DomainID!
+                    "StudentID": UserDefaults.standard.integer(forKey: "StudentID"),
+                    "ProjectName" : projectNameTextField.text!,
+                    "GitHubLink" : githubTextField.text!,
+                    "courseOfferedID" : Int(courseIDTextField.text!)!,
+                    "Skillvalue":skillsGainedTextField.text!,
+                    "ApproveStatus": "Complete",
+                    "FrameworkID":frameID!,
+                    "DomainID":DomainID!
             
                    ] as [String : Any]
                
                AF.request("http://127.0.0.1:8080/api/studentProfile/AddProject", method: HTTPMethod.post, parameters: parameters).response { (response) in
                    
                }
+        ProgressHUD.showSucceed()
+        self.dismiss(animated: true,completion: nil)
+    
     }
 }
     
@@ -86,9 +103,20 @@ extension AddProjectViewController:UIPickerViewDelegate,UIPickerViewDataSource{
         if pickerView.tag == 1{
             value = frameworkName[row].FName!
             frameID = frameworkName[row].FID!
+            if(frameID==0){
+                NewFrameworkView.isHidden = false
+            }
+            else{
+                NewFrameworkView.isHidden = true
+            }
         }else if pickerView.tag == 2 {
             value = domainName[row].DomainName!
             DomainID = domainName[row].DomainID!
+            if(DomainID==0){
+                NewDomainView.isHidden = false
+            }else{
+                NewDomainView.isHidden = true
+            }
         }
         return value
     }
@@ -112,6 +140,10 @@ extension AddProjectViewController:UIPickerViewDelegate,UIPickerViewDataSource{
                            for model in models{
                                self.domainName.append(model)
                             }
+                var d = Domain()
+                d.DomainID = 0
+                d.DomainName = "Add a New Organization"
+                self.domainName.append(d)
                 }catch{
                     self.gotError()
                 }
@@ -126,6 +158,10 @@ extension AddProjectViewController:UIPickerViewDelegate,UIPickerViewDataSource{
                         for model in models{
                             self.frameworkName.append(model)
                         }
+                let f = Framework()
+                f.FID = 0
+                f.FName = "Add a New Framework"
+                self.frameworkName.append(f)
                 
             }catch{
                 self.gotError()

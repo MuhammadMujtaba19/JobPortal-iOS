@@ -33,8 +33,8 @@ class ProfileViewController: UIViewController {
         StudentNameText.text = studentData?.SName
         StudentRollNumberText.text = studentData?.RollNumber
         let StudentID:Int = (studentData?.StudentID)!
+        
         print(StudentID)
-
         GetExperience(StudentID: StudentID)
         GetProjects(StudentID: StudentID)
         GetSkills(StudentID: StudentID)
@@ -55,7 +55,7 @@ class ProfileViewController: UIViewController {
     func GetExperience(StudentID:Int)  {
         AF.request("http://127.0.0.1:8080/api/studentProfile/GetExperienceByID/\(StudentID)").responseJSON { (response) in
             do{
-                print(response)
+                
                 let decoder = JSONDecoder()
                 let models = try decoder.decode([Experience].self, from:
                     response.data!) //Decode JSON Response Data
@@ -72,7 +72,7 @@ class ProfileViewController: UIViewController {
          
                AF.request("http://127.0.0.1:8080/api/studentProfile/GetProjectsByID/\(StudentID)").responseJSON { (response) in
                    do{
-                       print(response)
+                       
                        let decoder = JSONDecoder()
                        let models = try decoder.decode([Project].self, from:
                            response.data!) //Decode JSON Response Data
@@ -107,6 +107,19 @@ class ProfileViewController: UIViewController {
         expirenceTableView.reloadData()
         refreshControl.endRefreshing()
 
+    }
+    @IBAction func OnLogoutClick(_ sender: UIButton) {
+//        UserDefaults.standard.
+//        UserDefaults.standard.set(session_data, forKey: "current")
+//        UserDefaults.standard.set(true, forKey: "userLoggedIn")
+//        UserDefaults.standard.set(currentStudent.StudentID, forKey: "StudentID")
+        UserDefaults.standard.removeObject(forKey: "current")
+        UserDefaults.standard.removeObject(forKey: "userLoggedIn")
+        UserDefaults.standard.removeObject(forKey: "StudentID")
+        let story = UIStoryboard(name: "Main", bundle:nil)
+           let vc = story.instantiateViewController(withIdentifier: "loginScreen") as! LoginViewController
+           UIApplication.shared.windows.first?.rootViewController = vc
+           UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
 }
 extension ProfileViewController:UITableViewDelegate,UITableViewDataSource{
@@ -209,7 +222,7 @@ extension ProfileViewController:UITableViewDelegate,UITableViewDataSource{
         if indexPath.section == 0{
             let delete = UIContextualAction(style: .destructive, title: "Delete") { (action, view, nil) in
                 
-                AF.request("http://127.0.0.1:8080/api/studentProfile/DeleteExperience/\(String(describing:self.studentProfile?.experiences[indexPath.row].ExpID ?? 0)) ",method: HTTPMethod.post).responseJSON { (response) in
+                AF.request("http://127.0.0.1:8080/api/studentProfile/DeleteExperience/\(String(describing:self.studentProfile?.experiences[indexPath.row].ExpID ?? 0))",method: HTTPMethod.delete).responseJSON { (response) in
                       print("http://127.0.0.1:8080/api/studentProfile/DeleteExperience/\(String(describing:self.studentProfile?.experiences[indexPath.row].ExpID  ??  0))")
                         self.studentProfile?.experiences.remove(at: indexPath.row)
                         self.expirenceTableView.reloadData()

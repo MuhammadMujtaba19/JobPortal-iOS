@@ -21,7 +21,7 @@ class JobViewController: UIViewController{
         JobTableView.delegate = self
         JobTableView.dataSource = self
         
-            AF.request("http://127.0.0.1:8080/api/Job/GetAllJobs").responseJSON { (response) in
+            AF.request("http://127.0.0.1:8080/api/jobs").responseJSON { (response) in
                 do{
 //                    print(response)
                     let decoder = JSONDecoder()
@@ -72,20 +72,22 @@ extension JobViewController:UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "JobCell", for: indexPath) as! JobViewCell
-        cell.JobTitle?.text = filteredjobs[indexPath.row].Designation
+        cell.JobTitle?.text = filteredjobs[indexPath.row].Title
         cell.JobCompany?.text = filteredjobs[indexPath.row].Organization
         
         return cell
         
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        id = indexPath.row
+        id = filteredjobs[indexPath.row].JobID
         self.performSegue(withIdentifier: "jobDetail", sender: self)
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier=="jobDetail"){
-            print("here")
+            // Create a variable that you want to send
+             let destinationVC = segue.destination as! JobDetailViewController
+            destinationVC.jobid = id
     }
     }
 }

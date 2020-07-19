@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import ProgressHUD
 class AddExperienceViewController: UIViewController {
 
     
@@ -59,8 +60,10 @@ class AddExperienceViewController: UIViewController {
             ] as [String : Any]
         
         AF.request("http://127.0.0.1:8080/api/studentProfile/AddExperience", method: HTTPMethod.post, parameters: parameters).response { (response) in
-            self.dismiss(animated: true, completion: nil)
+            
         }
+        ProgressHUD.showSucceed()
+        self.dismiss(animated: true,completion: nil)
 
     }
     func createStartDatePicker(){

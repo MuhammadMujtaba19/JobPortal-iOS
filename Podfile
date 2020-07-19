@@ -7,6 +7,8 @@ target 'JobPortal' do
 
   # Pods for JobPortal
 pod 'Alamofire', '~> 5.2'
+pod 'ProgressHUD'
+
 
 
 end
