@@ -16,6 +16,15 @@
 		925D6048247DB0B70078A547 /* fast.png in Resources */ = {isa = PBXBuildFile; fileRef = 925D6047247DB0B70078A547 /* fast.png */; };
 		925DDDC9247D6680004B03E5 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925DDDC8247D6680004B03E5 /* Student.swift */; };
 		926EC8E3247D1673004AC431 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926EC8E2247D1673004AC431 /* LoginViewController.swift */; };
+		9282868224CD86A100AFF21A /* Login.png in Resources */ = {isa = PBXBuildFile; fileRef = 9282867924CD86A000AFF21A /* Login.png */; };
+		9282868324CD86A100AFF21A /* Home2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9282867A24CD86A000AFF21A /* Home2.png */; };
+		9282868424CD86A100AFF21A /* Home.png in Resources */ = {isa = PBXBuildFile; fileRef = 9282867B24CD86A000AFF21A /* Home.png */; };
+		9282868524CD86A100AFF21A /* JobDetails.png in Resources */ = {isa = PBXBuildFile; fileRef = 9282867C24CD86A000AFF21A /* JobDetails.png */; };
+		9282868624CD86A100AFF21A /* AddProject1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9282867D24CD86A000AFF21A /* AddProject1.png */; };
+		9282868724CD86A100AFF21A /* AddProject3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9282867E24CD86A000AFF21A /* AddProject3.png */; };
+		9282868824CD86A100AFF21A /* JobList.png in Resources */ = {isa = PBXBuildFile; fileRef = 9282867F24CD86A000AFF21A /* JobList.png */; };
+		9282868924CD86A100AFF21A /* JobDetails2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9282868024CD86A000AFF21A /* JobDetails2.png */; };
+		9282868A24CD86A100AFF21A /* AddProject2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9282868124CD86A000AFF21A /* AddProject2.png */; };
 		9290F845247FDD4100D25200 /* JobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9290F844247FDD4100D25200 /* JobViewController.swift */; };
 		9290F8472482919900D25200 /* JobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9290F8462482919900D25200 /* JobDetailViewController.swift */; };
 		9290F8492482932E00D25200 /* JobDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9290F8482482932E00D25200 /* JobDetails.swift */; };
@@ -55,6 +64,15 @@
 		925D6047247DB0B70078A547 /* fast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fast.png; sourceTree = "<group>"; };
 		925DDDC8247D6680004B03E5 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		926EC8E2247D1673004AC431 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9282867924CD86A000AFF21A /* Login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Login.png; sourceTree = "<group>"; };
+		9282867A24CD86A000AFF21A /* Home2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Home2.png; sourceTree = "<group>"; };
+		9282867B24CD86A000AFF21A /* Home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Home.png; sourceTree = "<group>"; };
+		9282867C24CD86A000AFF21A /* JobDetails.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JobDetails.png; sourceTree = "<group>"; };
+		9282867D24CD86A000AFF21A /* AddProject1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddProject1.png; sourceTree = "<group>"; };
+		9282867E24CD86A000AFF21A /* AddProject3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddProject3.png; sourceTree = "<group>"; };
+		9282867F24CD86A000AFF21A /* JobList.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JobList.png; sourceTree = "<group>"; };
+		9282868024CD86A000AFF21A /* JobDetails2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JobDetails2.png; sourceTree = "<group>"; };
+		9282868124CD86A000AFF21A /* AddProject2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddProject2.png; sourceTree = "<group>"; };
 		9290F844247FDD4100D25200 /* JobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewController.swift; sourceTree = "<group>"; };
 		9290F8462482919900D25200 /* JobDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailViewController.swift; sourceTree = "<group>"; };
 		9290F8482482932E00D25200 /* JobDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetails.swift; sourceTree = "<group>"; };
@@ -158,6 +176,22 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		9282867824CD865B00AFF21A /* ScreenShot */ = {
+			isa = PBXGroup;
+			children = (
+				9282867D24CD86A000AFF21A /* AddProject1.png */,
+				9282868124CD86A000AFF21A /* AddProject2.png */,
+				9282867E24CD86A000AFF21A /* AddProject3.png */,
+				9282867B24CD86A000AFF21A /* Home.png */,
+				9282867A24CD86A000AFF21A /* Home2.png */,
+				9282867C24CD86A000AFF21A /* JobDetails.png */,
+				9282868024CD86A000AFF21A /* JobDetails2.png */,
+				9282867F24CD86A000AFF21A /* JobList.png */,
+				9282867924CD86A000AFF21A /* Login.png */,
+			);
+			path = ScreenShot;
+			sourceTree = "<group>";
+		};
 		92BD3AD4247683C8001CB6B2 /* SectionHeader */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +221,7 @@
 		92E9D921247469FC00017962 /* JobPortal */ = {
 			isa = PBXGroup;
 			children = (
+				9282867824CD865B00AFF21A /* ScreenShot */,
 				92E9D92B24746A0100017962 /* Assets.xcassets */,
 				925D6047247DB0B70078A547 /* fast.png */,
 				92E9D928247469FC00017962 /* Main.storyboard */,
@@ -262,12 +297,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				92D6B7412476D5A9008CDB69 /* ExperienceViewCell.xib in Resources */,
+				9282868824CD86A100AFF21A /* JobList.png in Resources */,
 				92E9D92F24746A0100017962 /* LaunchScreen.storyboard in Resources */,
+				9282868424CD86A100AFF21A /* Home.png in Resources */,
+				9282868A24CD86A100AFF21A /* AddProject2.png in Resources */,
+				9282868624CD86A100AFF21A /* AddProject1.png in Resources */,
+				9282868524CD86A100AFF21A /* JobDetails.png in Resources */,
 				92538D6C247FDA590091C6A5 /* JobViewCell.xib in Resources */,
 				92E9D92C24746A0100017962 /* Assets.xcassets in Resources */,
 				92E9D92A247469FC00017962 /* Main.storyboard in Resources */,
+				9282868224CD86A100AFF21A /* Login.png in Resources */,
 				92D6B7452476D8EF008CDB69 /* ProjectViewCell.xib in Resources */,
+				9282868924CD86A100AFF21A /* JobDetails2.png in Resources */,
 				925D6048247DB0B70078A547 /* fast.png in Resources */,
+				9282868324CD86A100AFF21A /* Home2.png in Resources */,
+				9282868724CD86A100AFF21A /* AddProject3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
